@@ -1,0 +1,23 @@
+.bg-midnight {
+  background-color: rgba(4, 31, 44, 0.8);
+}
+
+.bg-message {
+  background-color: rgba(12, 66, 89, 1);
+}
+
+.text-message {
+  color: rgba(23, 80, 104, 1);
+}
+
+.text-form {
+  color: rgba(38, 89, 110, 1);
+}
+
+.border-form {
+  border-color: rgba(38, 89, 110, 1);
+}
+
+body {
+  font-family: 'Arima', 'Poppins', Helvetica, 'Raleway';
+}

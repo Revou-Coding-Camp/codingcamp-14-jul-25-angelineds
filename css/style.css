@@ -18,6 +18,59 @@
   border-color: rgba(38, 89, 110, 1);
 }
 
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-contenth {
+  position: relative; /* or absolute, fixed — depending on context */
+  z-index: 30;
+  background: white;
+  padding: 20px 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-content input {
+  padding: 8px;
+  width: 80%;
+  margin: 10px 0;
+  border: 1px solid rgb(33, 33, 51);
+  border-radius: 5px;
+}
+
+.popup-content button {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: rgb(57, 104, 145);
+  border-radius: 8px;
+}
+
+.popup-content button:hover {
+  background-color: rgb(189, 215, 238);
+  color: midnightblue;
+}
+
 body {
   font-family: 'Arima', 'Poppins', Helvetica, 'Raleway';
 }

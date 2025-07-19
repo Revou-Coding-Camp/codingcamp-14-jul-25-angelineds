@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="./css/img/logo-web.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftMed Company</title>
 
@@ -12,7 +13,17 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <header class=" flex items-center px-[30px] py-[10px] bg-midnight gap-10 w-full z-100 fixed">
+  <!-- Welcome Message -->
+  <div id="welcome-popup" class="popup-overlay" style="display: none">
+    <div class="popup-content">
+      <h2>Welcome!</h2>
+      <p>Please enter your name!</p>
+      <input type="text" id="username-input" placeholder="Enter your name here"/>
+      <button id="submit-name">Submit</button>
+    </div>
+  </div>
+
+  <header class=" flex items-center px-[30px] py-[10px] bg-midnight gap-10 w-full z-10 fixed">
     <!-- Logo -->
     <img src="./css/img/logo.png" alt="Logo" class="h-10 w-auto" />
 
@@ -132,21 +143,23 @@
           </form>
 
           <!-- Popup Menu -->
-          <div id="popupMenu" class="hidden absolute top-25 left-60 bg-gray-700 border text-white border-gray-300 shadow-lg rounded-xl p-5 w-fit z-50">
-            <div class="flex justify-between items-center mb-5">
-              <h3 class="text-xl font-semibold underline underline-offset-8 decoration-2">Submission History</h3>
-              <button onclick="closePopup()" class="text-sm text-red-300 hover:text-red-500 ml-4">✕</button>
+          <div id="history-popup" class="popup-overlay" style="display: none">
+            <div id="popupMenu" class="hidden relative bg-white px-8 py-5 rounded-xl text-left z-30">
+              <div class="flex justify-between items-center mb-5">
+                <h3 class="text-xl font-semibold underline underline-offset-8 decoration-2">Submission History</h3>
+                <button onclick="closePopup()" class="text-lg font-semibold text-red-400 hover:text-red-600 ml-4">✕</button>
+              </div>
+              <p class="text-base text-slate-500">Submitted on <span id="form-date">[...]</span></p>
+              <p class="text-lg mt-1">Name: <span id="form-name">[User]</span></p>
+              <p class="text-lg mt-1">Email: <span id="form-email">[User]</span></p>
+              <p class="text-lg mt-1">Date of Birth: <span id="form-birth">[User]</span></p>
+              <p class="text-lg mt-1">Gender: <span id="form-gender">[User]</span></p>
+              <p class="text-lg mt-1">Message: <span id="form-message">[User]</span></p>
             </div>
-            <p class="text-base text-slate-300">Submitted on <span id="form-date">[...]</span></p>
-            <p class="text-lg mt-1">Name: <span id="form-name">[User]</span></p>
-            <p class="text-lg mt-1">Email: <span id="form-email">[User]</span></p>
-            <p class="text-lg mt-1">Date of Birth: <span id="form-birth">[User]</span></p>
-            <p class="text-lg mt-1">Gender: <span id="form-gender">[User]</span></p>
-            <p class="text-lg mt-1">Message: <span id="form-message">[User]</span></p>
           </div>
+
         </div>
       </section>
-      </div>
     </section>
   </main>
 

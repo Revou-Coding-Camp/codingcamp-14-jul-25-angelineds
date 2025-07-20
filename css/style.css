@@ -1,3 +1,7 @@
+body {
+  font-family: 'Arima', 'Poppins', Helvetica, 'Raleway';
+}
+
 .bg-midnight {
   background-color: rgba(4, 31, 44, 0.8);
 }
@@ -24,41 +28,32 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 20;
 }
 
-.popup-content {
+.welcome-content {
   background: white;
-  padding: 20px 20px;
   border-radius: 10px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.popup-contenth {
-  position: relative; /* or absolute, fixed — depending on context */
-  z-index: 30;
-  background: white;
-  padding: 20px 20px;
-  border-radius: 10px;
-  text-align: left;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.popup-content input {
-  padding: 8px;
-  width: 80%;
+.welcome-content input {
+  padding: 5px 10px;
+  width: 100%;
   margin: 10px 0;
   border: 1px solid rgb(33, 33, 51);
   border-radius: 5px;
 }
 
-.popup-content button {
+.welcome-content button {
   padding: 8px 16px;
+  width: 100%;
   cursor: pointer;
   font-weight: 500;
   color: rgb(255, 255, 255);
@@ -66,11 +61,7 @@
   border-radius: 8px;
 }
 
-.popup-content button:hover {
+.welcome-content button:hover {
   background-color: rgb(189, 215, 238);
   color: midnightblue;
-}
-
-body {
-  font-family: 'Arima', 'Poppins', Helvetica, 'Raleway';
 }

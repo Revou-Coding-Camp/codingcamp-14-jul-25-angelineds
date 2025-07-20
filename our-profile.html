@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="./css/img/logo-web.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SwiftMed Profile</title>
+  <title>SwiftMed Company</title>
 
   <!-- CSS External Link -->
   <link rel="stylesheet" href="./css/style.css">
@@ -12,39 +13,40 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <header class=" flex items-center px-[30px] py-[10px] bg-midnight gap-10 w-full z-100 fixed">
+  <header class=" flex items-center pl-[15px] pr-[1px] py-[12px] bg-midnight gap-1 w-full z-10 fixed md:gap-10 md:px-[40px]">
     <!-- Logo -->
-    <img src="../css/img/logo.png" alt="Logo" class="h-10 w-auto" />
+    <img src="./css/img/logo.png" alt="Logo" class="h-6 w-auto md:h-10" />
 
     <!-- Navigation Bar -->
-    <div class="flex justify-between items-center text-white text-base font-medium w-full">
-      <nav class="flex gap-8">
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="index.html#home-page">Home</a>
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="our-profile.html">Our Profile</a>
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="index.html#message-us">Message Us</a>
+    <div class="flex justify-center items-center text-white font-medium w-full text-[11px] md:text-base md:justify-between">
+      <nav class="flex gap-1 md:gap-8">
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="index.html#home-page">Home</a>
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="our-profile.html">Our Profile</a>
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="index.html#message-us">Message Us</a>
       </nav>
 
       <nav>
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="https://angelinedwisanjaya.netlify.app/"
-           target="_blank">Other Portfolio</a>
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="https://angelinedwisanjaya.netlify.app/"
+           target="_blank">Portfolio</a>
       </nav>
     </div>
   </header>
+
   <main>
     <!-- Landing Page -->
-    <div class="relative bg-[url('./css/img/profile-bg-img.png')] bg-cover bg-center h-[250px]">
-      <div class="absolute top-35 left-125 flex items-center justify-center">
-        <h1 class="text-white text-4xl font-bold text-center">ABOUT THE COMPANY</h1>
+    <div class="relative bg-[url('./css/img/profile-bg-img.png')] bg-cover h-[25vh] w-full md:h-[40vh]">
+      <div class="absolute top-[50%] left-[15%]">
+        <h1 class="text-white text-2xl md:text-4xl font-bold text-center">ABOUT THE COMPANY</h1>
       </div>
     </div>
 
-    <div class="mt-15 mx-30">
+    <div class="mt-[8%] md:mt-[5%] mx-[10%]">
       <!-- About -->
-      <div class="flex flex-row gap-4 items-center">
-        <div class="h-11 w-3 bg-[rgba(14,64,86,0.95)]"></div>
-        <h1 class="text-[rgba(2,63,89,1)] text-4xl font-bold">Get to Know Us</h1>
+      <div class="flex flex-row gap-2 md:gap-4 items-center">
+        <div class="h-8 w-2 md:h-11 md:w-3 bg-[rgba(14,64,86,0.95)]"></div>
+        <h1 class="text-[rgba(2,63,89,1)] text-2xl md:text-4xl font-bold">Get to Know Us</h1>
       </div>
-      <p class="mt-5 mb-15 text-lg text-[rgba(109, 132, 142, 1)] text-justify">SwiftMed is a leading digital health 
+      <p class="mt-5 mb-10 md:mb-15 text-sm md:text-lg text-[rgba(109, 132, 142, 1)] text-justify">SwiftMed is a leading digital health 
         technology company, passionately committed to revolutionizing healthcare accessibility and delivery. 
         We leverage innovative technological solutions to bridge the gap between patients and medical expertise, 
         fostering a more connected and responsive healthcare ecosystem. Our seamless platform integrates advanced 
@@ -55,20 +57,20 @@
       </p>
 
       <!-- Vision and Mission -->
-      <div class="mt-12 flex flex-row gap-4 items-center">
-        <div class="h-11 w-3 bg-[rgba(14,64,86,0.95)]"></div>
-        <h1 class="text-[rgba(2,63,89,1)] text-4xl font-bold">Our Vision and Mission</h1>
+      <div class="mt-3 md:mt-12 flex flex-row gap-2 md:gap-4 items-center">
+        <div class="h-8 w-2 md:h-11 md:w-3 bg-[rgba(14,64,86,0.95)]"></div>
+        <h1 class="text-[rgba(2,63,89,1)] text-2xl md:text-4xl font-bold">Our Vision and Mission</h1>
       </div>
-      <div class="flex flex-row justify-between items-center my-10 gap-20">
-        <p class="bg-[rgba(205,225,234,0.4)] text-[rgba(29,58,71,1)] font-medium text-lg p-5 border rounded-xl">To be the leading 
+      <div class="flex flex-row justify-between items-center my-10 gap-5 md:gap-20">
+        <p class="bg-[rgba(205,225,234,0.4)] text-[rgba(29,58,71,1)] font-medium text-sm p-3 text-justify md:text-left md:text-lg md:p-5 border rounded-xl">To be the leading 
           digital healthcare platform in Southeast Asia, empowering individuals with accessible, reliable, and 
           personalized medical devices through innovative technology.
         </p>
         <img src="css/img/vision-img.png" alt="vision-logo" width="20%" height="auto">
       </div>
-      <div class="flex flex-row justify-between items-center my-15 gap-20">
+      <div class="flex flex-row justify-between items-center my-12 md:my-15 gap-5 md:gap-20">
         <img src="css/img/mission-img.png" alt="mission-logo" width="20%" height="auto">
-        <div class="text-[rgba(53,105,128,1)] font-medium text-lg text-justify">
+        <div class="text-[rgba(53,105,128,1)] font-medium text-sm md:text-lg text-justify">
           <ul class="list-disc ml-6 space-y-3">
             <li>To make high-quality healthcare services available to everyone, regardless of location or background.</li>
             <li>To continuously develop and integrate advanced technology for better diagnosis, communication and health management.</li>
@@ -81,7 +83,10 @@
 
   <!-- Footer Content -->
   <footer>
-      <p class="bg-[rgba(13,48,63,1)] px-5 py-3 text-right text-white">© 2025 Angeline. All rights reserved.</p>
+      <p class="bg-[rgba(13,48,63,1)] text-[9px] py-2 px-3 text-right text-white md:px-5 md:py-3 md:text-base">© 2025 Angeline. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript External Link -->
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -15,29 +15,31 @@
 <body>
   <!-- Welcome Message -->
   <div id="welcome-popup" class="popup-overlay" style="display: none">
-    <div class="popup-content">
-      <h2>Welcome!</h2>
-      <p>Please enter your name!</p>
-      <input type="text" id="username-input" placeholder="Enter your name here"/>
-      <button id="submit-name">Submit</button>
+    <div class="welcome-content w-90% md:w-[40%]">
+      <h2 class="font-semibold text-base md:text-xl">Welcome!</h2>
+      <p class="text-sm md:text-base">Please enter your name below.</p>
+      <div class="flex flex-col items-center">
+        <input type="text" id="username-input" placeholder="Enter your name here"/>
+        <button id="submit-name">Submit</button>
+      </div>
     </div>
   </div>
 
-  <header class=" flex items-center px-[30px] py-[10px] bg-midnight gap-10 w-full z-10 fixed">
+  <header class=" flex items-center pl-[15px] pr-[1px] py-[12px] bg-midnight gap-1 w-full z-10 fixed md:gap-10 md:px-[40px]">
     <!-- Logo -->
-    <img src="./css/img/logo.png" alt="Logo" class="h-10 w-auto" />
+    <img src="./css/img/logo.png" alt="Logo" class="h-6 w-auto md:h-10" />
 
     <!-- Navigation Bar -->
-    <div class="flex justify-between items-center text-white text-base font-medium w-full">
-      <nav class="flex gap-8">
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="index.html#home-page">Home</a>
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="our-profile.html">Our Profile</a>
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="index.html#message-us">Message Us</a>
+    <div class="flex justify-center items-center text-white font-medium w-full text-[11px] md:text-base md:justify-between">
+      <nav class="flex gap-1 md:gap-8">
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="index.html#home-page">Home</a>
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="our-profile.html">Our Profile</a>
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="index.html#message-us">Message Us</a>
       </nav>
 
       <nav>
-        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-3 hover:text-blue-950 transition duration-300" href="https://angelinedwisanjaya.netlify.app/"
-           target="_blank">Other Portfolio</a>
+        <a class="no-underline hover:border hover:bg-white rounded-full py-1 px-2 hover:text-blue-950 transition duration-300 md:px-3" href="https://angelinedwisanjaya.netlify.app/"
+           target="_blank">Portfolio</a>
       </nav>
     </div>
   </header>
@@ -45,118 +47,123 @@
   <main>
     <section id="home-page">
       <!-- Landing Page -->
-      <div class="relative bg-[url('./css/img/home-bg-img.png')] bg-cover bg-center h-[600px]">
+      <div class="relative bg-[url('./css/img/home-bg-img.png')] bg-cover h-[100vh]">
         <!-- Overlayed text -->
-        <div class="absolute top-40 left-40 flex flex-col">
-          <h1 class="text-white text-4xl font-bold">
+        <div class="absolute inset-y-[10%] flex flex-col justify-center items-center md:inset-y-[28%] inset-x-[15%]">
+          <h1 class="text-white text-center text-xl font-bold md:text-4xl">
             Welcome to SwiftMed, <span id="welcome-user">[User]</span>!
           </h1>
-          <p class="text-white text-base mr-85 mt-6">
+          <p class="text-white text-center text-xs mt-8 md:text-base">
             SwiftMed revolutionizes the way you access medical care, offering a seamless connection 
             to healthcare providers at your fingertips. Whether it`s scheduling appointments, getting 
             consultations, or managing prescriptions, SwiftMed ensures that reliable medical services 
             are just one tap away. Our platform is designed with user convenience in mind, making 
             healthcare more accessible anytime and anywhere.
           </p>
-          <a class="bg-[rgba(76,142,170,1)] text-white font-bold text-base py-2 px-6 w-fit mt-18 rounded-4xl hover:bg-white hover:text-blue-950 
-             transition duration-200" href="our-profile.html">LEARN MORE ABOUT US</a>
+          <a class="bg-[rgba(76,142,170,1)] text-white font-bold text-sm py-2 px-4 w-fit mt-13 rounded-4xl hover:bg-white hover:text-blue-950 
+             transition duration-200 md:text-lg md:px-6 md:mt-18" href="our-profile.html">LEARN MORE ABOUT US</a>
         </div>
       </div>
 
       <!-- Article Section -->
-      <div class="h-[700px] bg-[linear-gradient(to_top,rgba(40,67,87,0.5),#ffffff)]">
-        <h1 class="text-bluegray text-4xl font-bold ml-40 mt-30 mb-10">WEEKLY TOPICS</h1>
-        <div class="flex flex-row mx-40 justify-between">
+      <div class="h-[90vh] bg-[linear-gradient(to_top,rgba(40,67,87,0.5),#ffffff)] md:h-[110vh]">
+        <h1 class="text-bluegray text-3xl font-bold mt-[20%] ml-[10%] mb-[8%] md:text-4xl md:mt-[10%] md:ml-[12%] md:mb-[3%]">WEEKLY TOPICS</h1>
+        <div class="flex flex-row flex-wrap mx-[9%] justify-between gap-3 md:mx-[12%]">
           <a href="https://www.medicalnewstoday.com/articles/323454" target="_blank" rel="noopener noreferrer"
-            class="block h-[400px] w-[300px] bg-blue-200 bg-[url('./css/img/topic-anxiety.png')] bg-cover bg-center rounded-xl
-                    transform transition-transform duration-300 hover:scale-105">
+            class="block h-[30vh] w-[22vh] bg-blue-200 bg-[url('./css/img/topic-anxiety.png')] bg-cover bg-center rounded-xl
+                    transform transition-transform duration-300 hover:scale-105 md:h-[400px] md:w-[300px]">
           </a>
           <a href="https://www.medicalnewstoday.com/articles/323648" target="_blank" rel="noopener noreferrer"
-            class="block h-[400px] w-[300px] bg-blue-200 bg-[url('./css/img/topic-cancer.png')] bg-cover bg-center rounded-xl
-                    transform transition-transform duration-300 hover:scale-105">
+            class="block h-[30vh] w-[22vh] bg-blue-200 bg-[url('./css/img/topic-cancer.png')] bg-cover bg-center rounded-xl
+                    transform transition-transform duration-300 hover:scale-105 md:h-[400px] md:w-[300px]">
           </a>
           <a href="https://www.medicalnewstoday.com/articles/323396" target="_blank" rel="noopener noreferrer"
-            class="block h-[400px] w-[300px] bg-blue-200 bg-[url('./css/img/topic-parkinson.png')] bg-cover bg-center rounded-xl
-                    transform transition-transform duration-300 hover:scale-105">
+            class="block h-[30vh] w-[22vh] bg-blue-200 bg-[url('./css/img/topic-parkinson.png')] bg-cover bg-center rounded-xl
+                    transform transition-transform duration-300 hover:scale-105 md:h-[400px] md:w-[300px]">
           </a>
         </div>
       </div>
 
       <!-- Message Us -->
       <section>
-        <div class="mx-40 h-170 relative">
-          <div class="absolute top-35">
-            <h1 class="font-bold bg-message text-white py-1 px-2 text-2xl mb-4 w-fit">LET'S GET IN TOUCH</h1>
-            <h2 class="text-message font-bold text-5xl mb-12">Have a question <br/> or feedback?</h2>
-            <p class="text-message">Thanks for stopping by! Whether you have a question, <br/> 
+        <div class="mx-[10%] h-[150vh] relative md:h-[100vh]">
+          <div class="absolute top-[10%] md:top-[15%]">
+            <h1 class="font-bold bg-message text-white py-1 px-2 text-lg mb-2 w-fit md:text-2xl md:mb-4">LET'S GET IN TOUCH</h1>
+            <h2 class="text-message font-bold text-3xl mb-5 md:text-5xl md:mb-15">Have a question <br/> or feedback?</h2>
+            <p class="text-message text-sm md:text-xl md:w-[45%]">Thanks for stopping by! Whether you have a question, 
                comment, or just want to say hi, we're here for you.</p>
           </div>
 
-          <form id="message-us" class="bg-white rounded-2xl shadow-[0_5px_20px_rgba(0,0,0,0.57)] h-175 w-130 absolute -top-20 left-130 p-10">
+          <form id="message-us" class="bg-white rounded-2xl shadow-[0_5px_20px_rgba(0,0,0,0.57)] h-fit w-[100%] p-5 absolute top-[35%] md:-top-[15%] md:w-[50%] md:left-[50%] md:p-10">
             <div>
-              <label for="name-input" class="text-form font-medium text-xl">Name</label>
+              <label for="name-input" class="text-form font-medium text-base md:text-xl">Name</label>
               <br/>
               <input type="text" id="name-input" name="name" placeholder="Enter your name here"
-                    class="border-2 border-[rgba(38,89,110,1)] rounded-3xl w-full py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
+                    class="border-1 md:border-2 border-[rgba(38,89,110,1)] rounded-3xl w-full py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
                     text-gray-600 focus:outline-none"/>
             </div>
             <div class="mt-5">
-              <label for="email-input" class="text-form font-medium text-xl pt-5">Email</label>
+              <label for="email-input" class="text-form font-medium text-base md:text-xl pt-5">Email</label>
               <br/>
               <input type="email" id="email-input" name="email" placeholder="Enter your email here"
-                    class="border-2 border-[rgba(38,89,110,1)] rounded-3xl w-full py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
+                    class="border-1 md:border-2 border-[rgba(38,89,110,1)] rounded-3xl w-full py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
                     text-gray-600 focus:outline-none"/>
             </div>
             <div class="mt-5">
-              <label for="birth-input" class="text-form font-medium text-xl pt-5">Date of Birth</label>
+              <label for="birth-input" class="text-form font-medium text-base md:text-xl pt-5">Date of Birth</label>
               <br/>
               <input type="date" id="birth-input" name="birth"
-                    class="border-2 border-[rgba(38,89,110,1)] rounded-3xl w-full py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
+                    class="border-1 md:border-2 border-[rgba(38,89,110,1)] rounded-3xl w-full py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
                     text-gray-600 focus:outline-none"/>
             </div>
             <div class="mt-5">
-              <label for="gender-input" class="text-form font-medium text-xl pt-5">Gender</label>
+              <label for="gender-input" class="text-form font-medium text-base md:text-xl pt-5">Gender</label>
               <br/>
               <div class="flex flex-row gap-15">
-                <label class="text-[20px] text-[rgba(38,89,110,1)] flex items-center gap-2">
-                  <input type="radio" id="gender-input" name="gender" value="male" class="border-2 border-[rgba(38,89,110,1)] rounded p-2"/> Male
+                <label class="text-[18px] md:text-[20px] text-[rgba(38,89,110,1)] flex items-center gap-2">
+                  <input type="radio" id="gender-input" name="gender" value="male" class="border-1 md:border-2 border-[rgba(38,89,110,1)] rounded p-2"/> Male
                 </label>
-                <label class="text-[20px] text-[rgba(38,89,110,1)] flex items-center gap-2">
-                  <input type="radio" id="gender-input" name="gender" value="female" class="border-2 border-[rgba(38,89,110,1)] rounded p-2 checked:bg-blue-500"/> Female
+                <label class="text-[18px] md:text-[20px] text-[rgba(38,89,110,1)] flex items-center gap-2">
+                  <input type="radio" id="gender-input" name="gender" value="female" class="border-1 md:border-2 border-[rgba(38,89,110,1)] rounded p-2"/> Female
                 </label>
               </div>
             </div>
-            <div class="mt-5">
-              <label for="note-input" class="text-form font-medium text-xl pt-5">Message</label>
+            <div class="mt-3 md:mt-5">
+              <label for="note-input" class="text-form font-medium text-base md:text-xl pt-5">Message</label>
               <br/>
-              <textarea id="note-input" class="border-2 border-[rgba(38,89,110,1)] rounded-xl w-full mt-1 py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
+              <textarea id="note-input" class="border-1 md:border-2 border-[rgba(38,89,110,1)] rounded-xl w-full mt-1 py-1 px-3 focus:border-sky-900 focus:ring-1 focus:ring-sky-900 
                         text-gray-600 focus:outline-none resize-none" rows="6" placeholder="Type your message here"></textarea>
             </div>
-            <div class="flex flex-row justify-between w-full items-center mt-7">
+            <div class="flex flex-row justify-between w-full items-center mt-4 md:mt-7">
               <button onclick="validateForm();" type="button"
-                  class="bg-[rgba(38,89,110,1)] text-white font-semibold text-xl py-1 px-5 border-3 border-[rgba(38,89,110,1)] rounded-full hover:bg-white 
+                  class="bg-[rgba(38,89,110,1)] text-white font-semibold text-lg md:text-xl py-1 px-5 border-[rgba(38,89,110,1)] rounded-full border-2 md:border-3 hover:bg-white 
                   hover:text-[rgba(38,89,110,1)] transition duration-200 cursor-pointer">Submit</button>
-              <a class="no-underline text-lg text-blue-500 hover:text-blue-900 hover:underline decoration-blue-900 decoration-2 underline-offset-8 transition 
-                 duration-200 cursor-pointer"onclick="togglePopup()">View Submit History</a>
+              <a class="no-underline text-blue-500 hover:text-blue-900 text-base md:text-lg hover:underline decoration-blue-900 decoration-2 underline-offset-8 transition 
+                 duration-200 cursor-pointer"onclick="togglePopup()">View History</a>
             </div>
-            <p class="mt-3 text-lg font-semibold text-center text-form" id="message-output"></p>
+            <p class="mt-2 text-sm md:mt-3 md:text-lg font-semibold text-center text-form" id="message-output"></p>
           </form>
 
-          <!-- Popup Menu -->
-          <div id="history-popup" class="popup-overlay" style="display: none">
-            <div id="popupMenu" class="hidden relative bg-white px-8 py-5 rounded-xl text-left z-30">
+          <!-- Form Submission History -->
+          <div id="hist-overlay" class="popup-overlay" style="display: none">
+            <div id="hist-menu" class="hidden relative bg-white px-8 py-5 rounded-xl text-left z-30">
               <div class="flex justify-between items-center mb-5">
-                <h3 class="text-xl font-semibold underline underline-offset-8 decoration-2">Submission History</h3>
-                <button onclick="closePopup()" class="text-lg font-semibold text-red-400 hover:text-red-600 ml-4">✕</button>
+                <h3 class="text-lg md:text-xl font-semibold underline underline-offset-8 decoration-2">Submission History</h3>
+                <button onclick="closePopup()" class="text-base md:text-lg font-semibold text-red-400 hover:text-red-600 ml-4 cursor-pointer">✕</button>
               </div>
-              <p class="text-base text-slate-500">Submitted on <span id="form-date">[...]</span></p>
-              <p class="text-lg mt-1">Name: <span id="form-name">[User]</span></p>
-              <p class="text-lg mt-1">Email: <span id="form-email">[User]</span></p>
-              <p class="text-lg mt-1">Date of Birth: <span id="form-birth">[User]</span></p>
-              <p class="text-lg mt-1">Gender: <span id="form-gender">[User]</span></p>
-              <p class="text-lg mt-1">Message: <span id="form-message">[User]</span></p>
+              <div id="hist-emptyContent">
+                <p class="text-base md:text-lg mt-1 text-center">No submission history found.</p>
+              </div>
+              <div id="hist-fullContent" class="hidden">
+                <p class="text-sm md:text-base text-slate-500">Submitted on <span id="form-date">[...]</span></p>
+                <p class="text-sm md:text-lg mt-1">Name: <span id="form-name">[User]</span></p>
+                <p class="text-sm md:text-lg mt-1">Email: <span id="form-email">[User]</span></p>
+                <p class="text-sm md:text-lg mt-1">Date of Birth: <span id="form-birth">[User]</span></p>
+                <p class="text-sm md:text-lg mt-1">Gender: <span id="form-gender">[User]</span></p>
+                <p class="text-sm md:text-lg mt-1">Message: <span id="form-message">[User]</span></p>
+              </div>
             </div>
-          </div>
+          </div> 
 
         </div>
       </section>
@@ -165,7 +172,7 @@
 
   <!-- Footer Content -->
   <footer>
-      <p class="bg-[rgba(13,48,63,1)] px-5 py-3 text-right text-white">© 2025 Angeline. All rights reserved.</p>
+      <p class="bg-[rgba(13,48,63,1)] text-[9px] py-2 px-3 text-right text-white md:px-5 md:py-3 md:text-base">© 2025 Angeline. All rights reserved.</p>
   </footer>
 
   <!-- JavaScript External Link -->

@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     welcomeUser.textContent = savedName;
   } else {
     welcomePopup.style.display = 'flex';
+    document.body.classList.add('overflow-hidden');
   }
 
   function submitName() {
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
       welcomeUser.textContent = userName;
       sessionStorage.setItem('userName', userName); // Simpan nama
       welcomePopup.style.display = 'none';
+      document.body.classList.remove('overflow-hidden');
     } else {
       alert('Please enter your name.');
     }
@@ -107,6 +109,10 @@ function validateForm() {
   messageOutput.classList.remove('hidden');
   messageOutput.innerHTML = `Thank you ${nameInput.value} for your message!`;
 
+  // Hide the empty content and displayed the new one
+  document.getElementById('hist-emptyContent').classList.toggle('hidden');
+  document.getElementById('hist-fullContent').classList.toggle('hidden');
+
   //Clear inputs
   nameInput.value = '';
   emailInput.value = '';
@@ -123,16 +129,13 @@ function validateForm() {
 }
 
 function togglePopup() {
-  const historyPopup = document.getElementById('history-popup');
-  const popup = document.getElementById('popupMenu');
-
-  historyPopup.style.display = 'flex';
-  popup.classList.toggle('hidden');
+  document.getElementById('hist-overlay').style.display = 'flex';
+  document.getElementById('hist-menu').classList.toggle('hidden');
   document.body.classList.add('overflow-hidden');
 }
 
 function closePopup() {
-  document.getElementById('popupMenu').classList.add('hidden');
-  document.getElementById('history-popup').style.display = 'none';
+  document.getElementById('hist-overlay').style.display = 'none';
+  document.getElementById('hist-menu').classList.toggle('hidden');
   document.body.classList.remove('overflow-hidden');
 }
